@@ -1,5 +1,5 @@
 import { useState } from "react";
-import demographicQs from '../questionData/adult/demographics.json';
+import demographicQs from '../questionData/youth/demographics.json';
 import MultipleSelect from "../utils/multiple-select";
 import ButtonSelect from "../utils/button-select";
 import NumberInput from "../utils/number-input";
@@ -36,19 +36,10 @@ export default function Demographics() {
             <h2>Date of Birth</h2>
             <input type='date' onChange={(e: any) => setDOB(e.target.value)} />
             {demographicQs.map((questionInfo): any => {
-                const { multiple, state, number_input } = questionInfo;
+                const { multiple, state } = questionInfo;
                 if (multiple) {
                     return (
                         <MultipleSelect
-                            key={state}
-                            questionInfo={questionInfo}
-                            updateState={setDemographic}
-                            state_details={demographic_details}
-                        />
-                    )
-                } else if (number_input) {
-                    return (
-                        <NumberInput
                             key={state}
                             questionInfo={questionInfo}
                             updateState={setDemographic}
