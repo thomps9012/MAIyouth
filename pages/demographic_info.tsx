@@ -2,7 +2,7 @@ import { useState } from "react";
 import demographicQs from '../questionData/youth/demographics.json';
 import MultipleSelect from "../utils/multiple-select";
 import ButtonSelect from "../utils/button-select";
-import NumberInput from "../utils/number-input";
+
 
 export default function Demographics() {
     const [date_of_birth, setDOB] = useState(new Intl.DateTimeFormat('en', {

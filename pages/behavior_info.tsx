@@ -1,6 +1,6 @@
 import { useState } from "react";
-import drugBehaviorQs from '../questionData/adult/drug-behavior.json'
-import sexualBehaviorQs from '../questionData/adult/sexual-behavior.json'
+import drugBehaviorQs from '../questionData/youth/drug-behavior.json'
+import sexualBehaviorQs from '../questionData/youth/sexual-behavior.json'
 import ButtonSelect from "../utils/button-select";
 import DropDownSelect from "../utils/drop-down-select";
 import MultipleSelect from "../utils/multiple-select";
