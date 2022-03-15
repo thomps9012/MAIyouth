@@ -21,7 +21,7 @@ export default function DataReview() {
     const Submit = async (interview_data: {}, interviewObj: any) => {
         const { PID } = interviewObj;
         const body = JSON.stringify(interview_data);
-        const res = await fetch(`/api/adult`, {
+        const res = await fetch(`/api/youth`, {
             method: 'POST',
             body: body
         }); if (res.ok) {
