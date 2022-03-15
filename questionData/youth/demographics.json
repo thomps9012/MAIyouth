@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "state": "latinx",
         "question": "Are you Hispanic, LatinX, or Spanish?",
         "answerChoices": [
             "Yes",
@@ -9,6 +10,7 @@
     },
     {
         "id": 2,
+        "state": "race",
         "question": "What is your race?",
         "detail": "One or more categories may be selected",
         "multiple": true,
@@ -21,6 +23,7 @@
     },
     {
         "id": 3,
+        "state": "gender",
         "question": "How do you describe yourself?",
         "answerChoices": [
             "Male",
@@ -31,6 +34,7 @@
     },
     {
         "id": 4,
+        "state": "sexual_orientation",
         "question": "Which of the following do you consider yourself to be?",
         "answerChoices": [
             "Straight / Heterosexual",
@@ -42,6 +46,7 @@
     },
     {
         "id": 5,
+        "state": "living_situation",
         "question": "Describe where you live?",
         "answerChoices": [
             "In my own home or apartment",
@@ -55,6 +60,7 @@
     },
     {
         "id": 6,
+        "state": "household_members",
         "question": "Who do you live with?",
         "detail": "Mark all that apply.",
         "multiple": true,
@@ -69,6 +75,7 @@
     },
     {
         "id": 7,
+        "state": "suspension",
         "question": "Have you ever been suspended from school for drug or alcohol use?",
         "answerChoices": [
             "Yes",
@@ -77,6 +84,7 @@
     },
     {
         "id": 8,
+        "state": "arrested_past_month",
         "question": "In the past 30 days, how many times have you been arrested?",
         "answerChoices": [
             "Yes",
@@ -85,6 +93,7 @@
     },
     {
         "id": 9,
+        "state": "informed_of_HIV_status",
         "question": "Have you ever been informed of your HIV status (this is, whether or not you are HIV-positive) based on the result of an HIV test?",
         "answerChoices": [
             "Yes",
@@ -93,6 +102,7 @@
     },
     {
         "id": 10,
+        "state": "informed_of_VH_status",
         "question": "Have you ever been informed of your viral hepatitis (VH) status (this is, whether or not you are infected with a hepitatis virus) based on the result of a VH test?",
         "answerChoices": [
             "Yes",
@@ -101,6 +111,7 @@
     },
     {
         "id": 11,
+        "state": "knowledge_of_healthcare_facility",
         "question": "Is there a doctor's office, health center, or other similar place that you usually go to when you are sick?",
         "answerChoices": [
             "Yes",
