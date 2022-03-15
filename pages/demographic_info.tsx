@@ -15,7 +15,6 @@ export default function Demographics() {
         sexual_orientation: '',
         living_situation: '',
         household_members: '',
-        employment_status: '',
         suspension: '',
         arrested_in_last_month: '',
         informed_of_HIV_status: '',

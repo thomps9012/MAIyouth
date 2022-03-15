@@ -36,21 +36,22 @@ body {
 
 .submitBtns>button {
     border: solid 1px;
-    background-color: #071E22;
-    border-color: #679289;
+    background-color: #0aa4af;
+    border-color: #071E22;
     text-align: center;
 }
 
 .submitBtns>button:hover {
-    background-color: #679289;
+    background-color: #071E22;
 }
 
 button {
     all: unset;
-    color: white;
+    color: #ece802;
     padding: 15px;
     font-size: large;
     border-radius: .2em;
+    font-weight: bold;
 }
 
 button:disabled {
