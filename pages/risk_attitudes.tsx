@@ -7,11 +7,12 @@ export default function Attitudes() {
         tobacco_use: '',
         binge_alcohol_use: '',
         marijuana_use: '',
-        shared_needle_use: '',
         nonprescription_opioid: '',
         prescription_opioid: '',
         unprotected_sex: '',
-        sex_under_influence: '',
+        inject_drugs: '',
+        could_refuse_alcohol: '',
+        could_refuse_drugs: '',
         could_refuse_unprotected_sex: ''
     })
     const Submit = async (risk_attitudes: {}) => {
