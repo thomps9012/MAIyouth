@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;600&family=Cabin:wght@500&family=Fjalla+One&family=Fredoka:wght@400;700&family=IBM+Plex+Sans:wght@100&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@100&display=swap');
+.title {
+    font-size: 35px;
+    text-align: center;
+}
+
+html,
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #071E22;
+}
+
+.interviewSelect,
+.demographicInfo,
+.riskInfo,
+.behaviorInfo {
+    padding: 5rem;
+    margin: 1rem;
+    text-align: left;
+    align-items: center;
+}
+
+.successScreen {
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.interviewInput {
+    margin: .1rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.submitBtns>button {
+    border: solid 1px;
+    background-color: #071E22;
+    border-color: #679289;
+    text-align: center;
+}
+
+.submitBtns>button:hover {
+    background-color: #679289;
+}
+
+button {
+    all: unset;
+    color: white;
+    padding: 15px;
+    font-size: large;
+    border-radius: .2em;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+button:disabled:hover {
+    background-color: gray;
+}
+
+.dataReview {
+    min-height: 100vh;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitBtns {
+    margin-top: 30px;
+}
+
+input {
+    text-align: center;
+}
+
+span {
+    font-style: italic;
+    margin: 5px;
+    padding: 5px;
+}
+
+pre {
+    white-space: pre-wrap;
+    overflow-x: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+[type="checkbox"] {
+    width: 1.4em;
+    height: 1.4em;
+}
+
+[type="radio"] {
+    min-width: 2em;
+    min-height: 2em;
+    border-radius: 0;
+}
+
+label {
+    padding: 5px;
+}
+
+[type="text"],
+select {
+    all: unset;
+    text-align: center;
+    font-size: x-large;
+}
+
+[type="number"],
+[type="date"] {
+    text-align: center;
+    font-size: x-large;
+}
