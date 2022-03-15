@@ -14,16 +14,13 @@ export default function Demographics() {
         gender: '',
         sexual_orientation: '',
         living_situation: '',
-        college_enrolled: '',
+        household_members: '',
         employment_status: '',
-        military_service: '',
+        suspension: '',
         arrested_in_last_month: '',
-        parole_or_probation: '',
         informed_of_HIV_status: '',
         informed_of_VH_status: '',
-        knowledge_of_SUD_healthcare_treatment: '',
-        knowledge_of_HIV_STD_healthcare_treatment: '',
-        pretax_household_income: ''
+        knowledge_of_healthcare_facility: ''
     })
     const demographic_info = { date_of_birth, demographic_details }
     const Submit = async (demographic_info: {}) => {
