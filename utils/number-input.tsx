@@ -17,6 +17,7 @@ const NumberInput = (({ questionInfo, state_details, updateState }: any) => {
                     style={{ textAlign: 'center', width: 150 }}
                     type='number'
                     name={state}
+                    min={0}
                     onChange={handleChange}
                 />
                 <div className="row" style={{display: 'flex'}}>
