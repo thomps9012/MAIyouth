@@ -5,7 +5,25 @@
         "question": "Are you Hispanic, LatinX, or Spanish?",
         "answerChoices": [
             "Yes",
-            "No"
+            "No",
+            "Refused"
+        ]
+    },
+    {
+        "id": "latinxDetail",
+        "dependent": true,
+        "state": "latinx",
+        "question": "What ethnic group do you consider yourself?",
+        "detail": "You may say yes to more than one",
+        "answerChoices": [
+            "Central American",
+            "Cuban",
+            "Dominican",
+            "Mexican",
+            "Puerto Rican",
+            "South American",
+            "Other",
+            "Refused"
         ]
     },
     {
@@ -17,8 +35,19 @@
         "answerChoices": [
             "White",
             "Black or African American",
-            "Asian",
-            "Native Hawaiian or Other Pacific Islander"
+            "American Indian or Alaska Native",
+            "Native Hawaiian",
+            "Asian Indian",
+            "Chinese",
+            "Japanese",
+            "Korean",
+            "Vietnamese",
+            "Filipino",
+            "Guamanian or Chamorro",
+            "Samoan",
+            "Other Asian",
+            "Other Pacific Islander",
+            "Refused"
         ]
     },
     {
@@ -30,6 +59,17 @@
             "Female",
             "Transgender",
             "I do not identify as male, female, or transgender"
+        ]
+    },
+    {
+        "id": "genderDetail",
+        "state": "gender",
+        "dependent": true,
+        "question": "Do you consider youself to be?",
+        "answerChoices": [
+            "Transgender, male to female",
+            "Transgender, female to male",
+            "Transgender, gender nonconforming"
         ]
     },
     {
@@ -85,11 +125,8 @@
     {
         "id": 8,
         "state": "arrested_in_last_month",
-        "question": "In the past 30 days, have you been arrested?",
-        "answerChoices": [
-            "Yes",
-            "No"
-        ]
+        "number_input": true,
+        "question": "In the past 30 days, have you been arrested?"
     },
     {
         "id": 9,
