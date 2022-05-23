@@ -19,24 +19,50 @@ export default function DataReview() {
         }
     }, [])
     const Submit = async (interview_data: {}, interviewObj: any) => {
-        const { PID } = interviewObj;
-        const body = JSON.stringify(interview_data);
-        const res = await fetch(`/api/youth`, {
-            method: 'POST',
-            body: body
-        }); if (res.ok) {
-            if (confirm(`${PID} is your PID Number \n \n Save this for your records and follow up interviews`)) {
-                window.location.assign('/success')
+        let { interview_type, testing_agency, PID } = interviewObj;
+        try {
+            if (interview_type === 'baseline' || interview_type === 'testing-services-only') {
+                const interviewCounts = await fetch('/api/count_records', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                const { taskForceRecords, noraRecords, caRecords } = await interviewCounts.json();
+                switch (testing_agency) {
+                    case 'AIDS Task Force':
+                        PID = `ATF${taskForceRecords + 1}`;
+                        break;
+                    case 'NORA':
+                        PID = `NORA${noraRecords + 1}`
+                        break;
+                    case 'Care Alliance':
+                        PID = `CA${caRecords + 1}`
+                        break;
+                    default:
+                        break;
+                }
             }
-        } else {
-            if(confirm('Your submission was unsuccessfull \n \n Please try starting again on the homepage \n - or - \n See a test administrator for help.')){
-                window.location.assign('/')
+        } finally {
+
+            const body = JSON.stringify(interview_data);
+            const res = await fetch(`/api/youth`, {
+                method: 'POST',
+                body: body
+            }); if (res.ok) {
+                if (confirm(`${PID} is your PID Number \n \n Save this for your records and follow up interviews`)) {
+                    window.location.assign('/success')
+                }
+            } else {
+                if (confirm('Your submission was unsuccessfull \n \n Please try starting again on the homepage \n - or - \n See a test administrator for help.')) {
+                    window.location.assign('/')
+                }
             }
         }
     }
     return (
         <div className="dataReview">
-            <h2 style={{textAlign: 'center'}}>Please Review Your Data before Submitting</h2>
+            <h2 style={{ textAlign: 'center' }}>Please Review Your Data before Submitting</h2>
             <div className="interview_data"></div>
             <div className="submitBtns">
                 <button onClick={() => Submit(interview_data, interviewObj)}>Submit Interview Data</button>
