@@ -32,19 +32,21 @@ export default function DataReview() {
                 switch (testing_agency) {
                     case 'AIDS Task Force':
                         PID = `ATF${taskForceRecords + 1}`;
+                        sessionStorage.setItem('PID', PID);
                         break;
                     case 'NORA':
                         PID = `NORA${noraRecords + 1}`
+                        sessionStorage.setItem('PID', PID);
                         break;
                     case 'Care Alliance':
                         PID = `CA${caRecords + 1}`
+                        sessionStorage.setItem('PID', PID);
                         break;
                     default:
                         break;
                 }
             }
         } finally {
-
             const body = JSON.stringify(interview_data);
             const res = await fetch(`/api/youth`, {
                 method: 'POST',
