@@ -3,6 +3,7 @@ import GenerateID from "../utils/generate-id";
 import StateChecker from "../utils/stateChecker";
 import { GetServerSideProps } from "next";
 import { connectToDatabase } from "../utils/mongodb";
+import titleCase from "../utils/titleCase";
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const { db } = await connectToDatabase();
@@ -64,7 +65,7 @@ export default function InterviewSelect(interviewCounts: any) {
     }
     const Submit = async (interview_info: any) => {
         sessionStorage.setItem('interview_info', JSON.stringify(interview_info))
-        if (confirm(`Your Identification Number is \n ${PID}`)) {
+        if (confirm(`This is a(n) \n${titleCase(interview_type)} Interview \nwith ${testing_agency} \non ${interview_date}`)) {
             window.location.assign('/demographic_info')
         }
     }
